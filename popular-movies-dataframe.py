@@ -24,7 +24,7 @@ nameDict = loadMovieNames()
 lines = spark.sparkContext.textFile("file:///Users/cyprienhenry/Documents/SparkCourse/ml-100k/u.data")
 
 # Convert it to a RDD of Row objects
-movies = lines.map(lambda x: Row(movieID =int(x.split()[1])))
+movies = lines.map(lambda x: Row(movieID =int(x.split()[1])))git
 
 # Convert that to a DataFrame
 movieDataset = spark.createDataFrame(movies)
